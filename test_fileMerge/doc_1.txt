@@ -1,0 +1,8177 @@
+const string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVELconst string MDRAIRPRESET_TOPIC = "MDRMAIRPRESET_TOPIC"
+
+const long MAIR_RWY_MAX = 9;
+const long MAIR_SIZE = 99;
+const long MAIR_LAT_AIR_SIZE = 9;
+const long MAIR_LONG_AIR_SIZE = 9;
+const long MAIR_LAT_RNW_SIZE = 9;
+const long MAIR_LONG_RNW_SIZE = 10;
+const long MAIR_ID_SIZE = 4;
+const long MAIR_ID_RNW_SIZE = 3;
+const long MAIR_SURFACE_SIZE = 13;
+const long MAIR_NAME_SIZE = 30;
+
+struct AirportCOM {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+}
+
+struct AirportNDB_ADF {
+	octet aID[MAIR_ID_SIZE];
+	long aFreq;
+}
+
+struct AirportVOR {
+	octet aID[MAIR_ID_SIZE];
+	float aVorFreq;
+	boolean aDME;
+	float aDMEFreq;
+}
+
+struct AirportLocalizer {
+	octet aID[MAIR_ID_SIZE];
+	float aFreq;
+	boolean aGS;
+	float aGSRamp;
+	long aThresholdElev;
+}
+
+struct AirportRunway {
+	octet aId[MAIR_ID_RNW_SIZE];
+	float aElev;
+	float aSlope;
+	float aLDA;
+	float aTORA;
+	float aASDA;
+	float aASDASlope;
+	float aHead;
+	float aWidth;
+	float aLength;
+	octet aLat[MAIR_LAT_RNW_SIZE];
+	octet aLong[MAIR_LONG_RNW_SIZE];
+	octet aFieldSurface[MAIR_SURFACE_SIZE];
+	long aObsHeight;
+	long aObsDistance;
+	AirportLocalizer aLocalizer;
+}
+
+struct Airport {
+	octet aAptIdent[MAIR_ID_SIZE];
+	octet aAptName[MAIR_NAME_SIZE];
+	octet aAptLat[MAIR_LAT_AIR_SIZE];
+	octet aAptLong[MAIR_LONG_AIR_SIZE];
+	float aAptElev;
+	unsigned short aRwyqtd;
+	AirportRunway aRunways[MAIR_RWY_MAX];
+	AirportVOR aVOR[MAIR_RWY_MAX];
+	AirportNDB_ADF aNDB_ADF[MAIR_RWY_MAX];
+	AirportCOM aCOM[MAIR_SIZE];
+}
+
+struct MdrMAIRPreset {
+	short aQnty;
+	Airport aMilAirports[MAIR_SIZE]; // this size differs from Ada, do we need to change this?
+};//@TOP-LEVEL
