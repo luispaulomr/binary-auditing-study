@@ -54,5 +54,5 @@ loc_401237 :
 
 
 	this is strncpy(V1, V2, V4), which ends when V4 is reached or *V2 == V3;
-
+	could also be a split with copy, specifying total length of array and token
 */
