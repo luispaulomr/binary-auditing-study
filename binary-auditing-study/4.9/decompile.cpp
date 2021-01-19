@@ -50,14 +50,14 @@ Label1 :
 214	mov edx, [ebx]				->	if (strpos(?, ?) == NULL) {
 214	call Sysutils::StrPos(char*, char*)	->		goto Label3;
 214	test eax, eax				->	} else {
-214	jz short Label3				->		FindWindowExA(edi, 0, "SysListView32", 0); (FindWindowEx(HWND, HWND, LPCSTR, LPCTS))
+214	jz short Label3				->		
 
 Label2:
 214	push 0
 218	push offset aSyslistview32
 21C	push 0
 220	push edi
-224	call FindWindowExA			-> FindWindowExA(edi, 0, "SysListView32", 0)
+224	call FindWindowExA			-> hwnd = FindWindowExA(V1, 0, "SysListView32", 0); (FindWindowEx(HWND, HWND, LPCSTR, LPCTS))
 214	mov [ebp+hwnd], eax
 214	push 0
 218	push 0
@@ -75,12 +75,12 @@ Label2:
 218	push 0
 21C	push 02h
 220	push edi
-224	call SendMessageA			-> SendMessageA(edi, 0x2, 0, 0)
+224	call SendMessageA			-> SendMessageA(V1, 0x2, 0, 0)
 214	push 0
 218	push 0
 21C	push 10h
 220	push edi
-224	call SendMessageA			-> SendMessageA(edi, 0x10, 0, 0)
+224	call SendMessageA			-> SendMessageA(V1, 0x10, 0, 0)
 
 Label3:
 214	add ebx, 4				-> ebx += 4
@@ -116,16 +116,67 @@ Address1:
 
 #include <stdio.h>
 #include <ctype.h>
+#include <windows.h>
+#include <iostream>
+#include <string>
+
+#define LVM_DELETEALLITEMS 0x1009
+
+BOOL CALLBACK procedure1(HWND hWnd, long lParam)
+{
+	char buff[255] = { 0 };
+
+	if (IsWindowVisible(hWnd)) {
+		printf("WINDOW\n");
+		int n = GetWindowTextA(hWnd, (LPSTR) buff, 254);
+		buff[n] = '\0';
+		std::string to_search_1(buff);
+
+		if (to_search_1.find("Release") != std::string::npos) {
+			std::cout << "LUL\n";
+			printf("%s\n", buff);
+			printf("Sending messages\n");
+			HWND new_hwnd = FindWindowExA(hWnd, 0, "SysListView32", 0);
+
+			printf("%d\n", new_hwnd);
+
+			SendMessageA(new_hwnd, LVM_DELETEALLITEMS, 0, 0);
+			SendMessageA(new_hwnd, WM_PAINT, 0, 0);
+			SendMessageA(hWnd, WM_DESTROY, 0, 0);
+			SendMessageA(hWnd, WM_ENABLE, 0, 0);
+			printf("Messages sent\n");
+		}
+
+		//printf("%s\n", buff);
+		//n = GetClassNameA(hWnd, (LPSTR)buff, 254);
+		//buff[n] = '\0';
+		//printf("%s\n", buff);
+
+		//std::string to_search_2(buff);
+
+		//if (to_search_2.find("Calculadora") != std::string::npos) {
+		//	std::cout << "LUL\n";
+		//	//SendMessageA(hWnd, LVM_DELETEALLITEMS, 0, 0);
+		//	//SendMessageA(hWnd, WM_PAINT, 0, 0);
+		//	SendMessageA(hWnd, WM_DESTROY, 0, 0);
+		//	SendMessageA(hWnd, WM_ENABLE, 0, 0);
+		//}
+	}
+
+	return TRUE;
+}
 
 int main()
 {
-	int i = 0;
-	char str[] = "Test String.\n";
-	char c;
-	while (str[i]) {
-		c = str[i];
-		putchar(tolower(c));
-		i++;
-	}
-	return 0;
+	//int i = 0;
+	//char str[] = "Test String.\n";
+	//char c;
+	//while (str[i]) {
+	//	c = str[i];
+	//	putchar(tolower(c));
+	//	i++;
+	//}
+	//return 0;
+
+	EnumWindows(procedure1, 0);
 }
